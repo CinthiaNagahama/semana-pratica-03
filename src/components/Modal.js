@@ -46,43 +46,43 @@ export const Modal = ({showModal, setShowModal, ex}) => {
     <>
       {showModal ? (
         <div className="modal-background" ref={modalRef} onClick={closeModal}>
-            <div className="modal-wrapper" showModal={showModal}>
-              <div className="modal-content">
-                <Card title={`Exercício ${question < 10 ? '0' + question : question}`}>
-                  {question === 1 && <Ex1/>}
-                  {question === 2 && <Ex2/>}
-                  {question === 3 && <Ex3/>}
-                  {question === 4 && <Ex4/>}
-                  {question === 5 && <Ex5/>}
-                  {question === 6 && <Ex6/>}
-                </Card>
-                <div className="modal-arrow-buttons-container">
-                  {question > 1 ? (
-                    <button 
-                      className="modal-arrow-buttons"
-                      onClick={() => goToPreviousQuestion()}
-                    >
-                      <IoArrowBackCircle/>
-                    </button>
-                  ) : null }
+          <div className="modal-wrapper" showModal={showModal}>
+            <div className="modal-content">
+              <Card title={`Exercício ${question < 10 ? '0' + question : question}`}>
+                {question === 1 && <Ex1/>}
+                {question === 2 && <Ex2/>}
+                {question === 3 && <Ex3/>}
+                {question === 4 && <Ex4/>}
+                {question === 5 && <Ex5/>}
+                {question === 6 && <Ex6/>}
+              </Card>
+              <div className="modal-arrow-buttons-container">
+                {question > 1 ? (
+                  <button 
+                    className="modal-arrow-buttons"
+                    onClick={() => goToPreviousQuestion()}
+                  >
+                    <IoArrowBackCircle/>
+                  </button>
+                ) : null }
 
-                  {question < 6 ? (
-                    <button 
-                      className="modal-arrow-buttons"
-                      onClick={() => goToNextQuestion()}
-                    >
-                      <IoArrowForwardCircle/>
-                    </button>
-                  ) : null }
-                </div>
+                {question < 6 ? (
+                  <button 
+                    className="modal-arrow-buttons"
+                    onClick={() => goToNextQuestion()}
+                  >
+                    <IoArrowForwardCircle/>
+                  </button>
+                ) : null }
               </div>
-              <button 
-                className="modal-close-button"
-                onClick={() => setShowModal(prev => !prev)} 
-              >
-                <MdClose/>
-              </button>
             </div>
+            <button 
+              className="modal-close-button"
+              onClick={() => setShowModal(prev => !prev)} 
+            >
+              <MdClose/>
+            </button>
+          </div>
       </div>
       ) : (
         null

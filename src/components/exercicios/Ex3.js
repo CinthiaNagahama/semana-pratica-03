@@ -71,8 +71,8 @@ export default function Ex3(){
               </tr>
             </thead>
             <tbody>
-              {register.map((student) => (
-                <tr>
+              {register.map((student, index) => (
+                <tr key={index}>
                   <td>{student.nr}</td>
                   <td>{student.getNota()}</td>
                   <td>{parseFloat(student.getNota()) >= 60 ? "APROVADO" : "REPROVADO"}</td>
