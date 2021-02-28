@@ -8,7 +8,7 @@ export default function Ex5(){
   const [c, setC] = useState(0);
 
   const handleInsertValue = (value, side) => {
-    if(value !== NaN && value <= 0){
+    if(!isNaN(value) && value <= 0){
       alert("O lado precisa ser maior que 0");
     } else {
       switch(side){

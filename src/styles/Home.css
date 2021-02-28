@@ -5,10 +5,11 @@
 }
 
 .container{
+  height: 100vh;
+
   display: grid;
   grid-template-rows: 1fr 1fr;
   justify-content: center;
-  height:   100vh;
 }
 
 header{
@@ -30,12 +31,35 @@ h3{
   font-size: 2rem;
 }
 
+h3 button{
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+h3 a{
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+h3 img{
+  width: 5vh;
+  height: 5vh;
+}
+
 h4{
   font-size: 1.5rem;
 }
 
+.card-button-container{
+  display: flex;
+  justify-content: center;
+}
+
 .card-button {
   margin-top: 0;
+  width: 30%;
   height: 20vh;
 
   padding: 2% 4%;
