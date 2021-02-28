@@ -1,0 +1,67 @@
+.ex1-title{
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ex1-fieldset{
+  border: none;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  row-gap: 1rem;
+  column-gap: 3rem;
+}
+
+.ex1-button-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ex1-button{
+  width: 10rem;
+  height: 2.5rem;
+  margin: 1.5rem;
+
+  border: none;
+  border-radius: 4px;
+  background-color: var(--blue);
+  color: var(--light);
+
+  cursor: pointer;
+}
+
+.ex1-button:hover{
+  background-color: var(--light-blue);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.ex1-results{
+  min-height: 0;
+  max-height: 13rem;
+}
+
+.ex1-results p {
+  font-size: 1.2rem;
+}
+
+.ex1-results #ex1-count-results{
+  height: 1.5rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ex1-results #ex1-values-results{  
+  height: 10rem;
+  overflow: auto;
+
+  display: flex;
+  justify-content: left;
+}
